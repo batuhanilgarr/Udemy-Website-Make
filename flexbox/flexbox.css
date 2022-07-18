@@ -1,0 +1,79 @@
+h1{
+ text-align: center;
+ display: block;
+}
+
+body {
+font-family: monospace;
+ margin: 0;
+ padding: 0;
+
+}
+
+.box{
+ display: flex;
+ background-color: red;
+
+/*  flex-direction: column yada rows bunlara ek olarak -reverse kullanılır ve divlerin alt alta yada yan yana yerleştirilmesini sağlar */
+ flex-direction: row;
+
+ /*  justify-content: divlerin sayfa üzerindeki konumunu ayarlar */
+ /* justify-content: space-around; */
+
+ /* Divleri eşitlemek için
+ align-items: center; */
+
+ 
+ /* flex-wrap: wrap; */
+}
+
+.blog {
+ padding: 0px;
+ margin: 0px;
+
+ /* div genişliğini ayarlamak için */
+ /* flex-basis: 250px; */
+}
+
+.blog1 {
+
+
+ /* flex: 1; */
+
+ /* order: Divlere verilen order hangisinde en küçük ise o en başa , en büyüğüde en sonda olacak şekilde sıralanır
+ order: 2; */
+
+  /* flex-grow: 1; */
+
+   /* flex-shrink: 1; */
+}
+
+.blog2 {
+ background-color: #f1c40f;
+
+ /* flex: verilen değere göre o kadar birim olarak ekranı paylaştırır */
+ /* flex: 1; */
+ /* order: 7; */
+
+  /* flex-basis ile belirlenen genişlik sonrası boşlukları flex-grow ile doldurulması sağlanabilir */
+ /* flex-grow: 1; */
+
+  /* flex-shrink: 3; */
+}
+
+.blog3 {
+ background-color: #3498db;
+ /* flex: 1; */
+ /* order: 1 */
+  /* flex-grow: 1; */
+
+   /* flex-shrink: 1; */
+}
+
+
+/* Ekranı küçültmeye başlayınca divler daralır ve kötü gözükür bunu sağlıklı bir hale getirmek için 800px'e düştükten sonra divlerin alt alta gösterilmesi için ; */
+@media (max-width: 500px){
+ .box {
+  flex-direction: column;
+ }
+}
